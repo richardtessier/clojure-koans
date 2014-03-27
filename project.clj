@@ -4,6 +4,10 @@
                  [koan-engine "0.2.0"]]
   :dev-dependencies [[lein-koan "0.1.2"]]
   :profiles {:dev {:dependencies [[lein-koan "0.1.2"]]}}
-  :repl-options {:init-ns user}
+  :repl-options {
+    :init-ns user
+    :init (println *ns*)
+   }
   :plugins [[lein-koan "0.1.2"]]
-  :main koan-engine.runner/exec)
+  :main koan-engine.runner/exec
+  )
